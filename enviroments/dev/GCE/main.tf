@@ -1,12 +1,12 @@
 module "create_vpc" {
-  source      = "github.com:kads-servin/GCP-RD.git//modules/Network/"
+  source      = "github.com:kads-servin/GCP-RD//modules/Network/"
   project_id  = var.project_id
   vpc_name    = "vpc-name"
   subnet_name = "subnet-name"
 }
 
 module "create_gce" {
-  source       = "github.com:kads-servin/GCP-RD.git//modules/GCE/"
+  source       = "github.com:kads-servin/GCP-RD//modules/GCE/"
   project_id   = var.project_id
   name         = "gce-kads-demo"
   machine_type = "n2d-standard-2"
