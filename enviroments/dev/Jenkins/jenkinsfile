@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+    environment {
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('kads-demo1')
+    }
+    tools {
+        terraform 'terraform'
+    }
+    stages{
+        stage('Git Checkout'){
+            steps{
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/kads-servin/KADS-DEMO'
+            }
+        
+        }
+        
+      stage('Terraform Init'){
+            steps{
+                sh 'terraform -chdir=enviroments/dev init'
+            }  
+            
+      stage('Terraform Apply/Destroy'){
+            steps{
+                sh 'terraform -chdir=enviroments/dev ${option} --auto-approve'
+            }        
+    }
+}
