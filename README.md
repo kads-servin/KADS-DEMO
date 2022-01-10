@@ -71,7 +71,7 @@ Connect to your Cloud storage and move to the bucket where your message are aloc
 
 
 
-# Authors
+# Author
 |        Name       |
 |-------------------|
 |  Karen Dominguez  |
