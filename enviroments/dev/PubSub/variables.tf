@@ -1,4 +1,4 @@
 variable "project_id" {
-  default     = "kads-demo-337219"
+  default     = "kads-demo"
   description = "project id"
 }
